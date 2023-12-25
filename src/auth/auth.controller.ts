@@ -16,6 +16,7 @@ export class AuthController {
 
   @Post()
   async signin(@Body() credentials: any) {
+    console.log(credentials);
     const { accessToken } = await this.authService.signin(credentials);
 
     return {
